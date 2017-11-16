@@ -1,0 +1,25 @@
+table {
+  border: solid var(--blueish) 1px;
+}
+thead {
+  background: var(--blueish);
+  color: white;
+}
+tr:nth-child(even) {
+  background: lightgray;
+}
+tr td:first-child {
+  font-weight: bold;
+}
+td {
+  padding: 9px;
+}
+.title {
+  text-align: left;
+
+}
+
+/*VARIABLES*/
+:root {
+  --blueish: #0e96b4;
+}
