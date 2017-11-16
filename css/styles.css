@@ -1,5 +1,10 @@
+
+
 table {
+  font-family: sans-serif;
   border: solid var(--blueish) 1px;
+  color: var(--sludge);
+  margin: 300px auto;
 }
 thead {
   background: var(--blueish);
@@ -10,16 +15,66 @@ tr:nth-child(even) {
 }
 tr td:first-child {
   font-weight: bold;
+
 }
 td {
   padding: 9px;
+  border-bottom: solid var(--blueish) 1px;
 }
 .title {
   text-align: left;
-
 }
 
+th {
+  padding: 9px;
+}
 /*VARIABLES*/
 :root {
   --blueish: #0e96b4;
+  --sludge: #5e5d51;
+}
+
+/*tooltip stuff?*/
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    /* border-bottom: 1px dotted black; */
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 30px;
+    background-color: red;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 97%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+ img {
+  width: 30px;
 }
